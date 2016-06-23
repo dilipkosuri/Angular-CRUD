@@ -1,0 +1,23 @@
+{
+  "name": "custdetails",
+  "plural": "custdetails",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cust_name": {
+      "type": "string",
+      "required": true
+    },
+    "phone_number": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

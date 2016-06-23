@@ -1,0 +1,72 @@
+
+<div class="container" ng-controller="MainController" ng-init="init()">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="page-header">
+        <h1>Main Form <small>Perform CRUD operation</small></h1>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-12 hero">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="txtName" class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control"  ng-model="custNameModel" id="txtName" placeholder="Name" value="custNameModel">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="txtPhoneNumber" class="col-sm-2 control-label">Phone Number</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="txtPhoneNumber" ng-model="phoneNumberModel" placeholder="Phone Number" value="phoneNumberModel">
+          </div>
+          <label for="txtPhoneNumber" class="col-sm-2 control-label">ID</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="txtID" ng-model="idModel" placeholder="ID" value="idModel">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-push-2 col-sm-10">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-Primary" ng-click="addMoreData()"><span class="glyphicon glyphicon-plus"></span>
+                Add</button>
+              <button type="button" class="btn btn-default" ng-click="updateData()"><span class="glyphicon glyphicon-floppy-disk"></span> Update</button>
+              <button type="button" class="btn btn-danger" ng-click="deleteData()"><span class="glyphicon glyphicon-minus"></span> Delete</button>
+            </div>
+            </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="page-header">
+        <h1>Result <small>View operation result</small></h1>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-push-2 col-sm-10">
+      <table class="table table-striped">
+        <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Status</th>
+        </thead>
+        <tbody>
+        <tr class="success" ng-repeat="value in showAllData">
+          <td>{{value.id}}</td>
+          <td>{{value.cust_name}}</td>
+          <td>{{value.phone_number}}</td>
+          <td>Active</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
